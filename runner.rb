@@ -5,3 +5,7 @@ require_relative 'post'
 require_relative 'comment'
 
 require 'nokogiri'
+load 'html_whitespace_cleaner.rb'
+html = File.read('html-samples/example.html')
+clean_html = HTMLWhitespaceCleaner.clean(html)
+
